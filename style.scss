@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+$Blue: #5847eb;
+$Light-orange: #ff8c66;
+$Soft-blue: #56c2e6;
+$Light-red: #ff5c7c;
+$Lime-green: #4acf81;
+$Violet: #7536d3;
+$Soft-orange: #f1c65b;
+$Very-dark-blue: #0f1424;
+$Dark-blue: #1c1f4a;
+$Desaturated-blue: #6f76c8;
+$Pale-Blue: #bdc1ff;
+$White: #fff;
+
+$Rubik: 'Rubik', sans-serif;
+
+@mixin background($color, $image) {
+    background: $color url($image) no-repeat;
+    background-position: top -10px right 20px;
+    background-size: 75px;
+    z-index: -1; 
+}
+
+body {
+    background-color: $Very-dark-blue;
+    color: $White;
+    font-family: $Rubik;
+    .dashboard {
+        &__profile-container {
+            background-color: $Dark-blue;
+        }
+        &__profile-user {
+            background-color: $Blue;
+            grid-template-columns: 85px 1fr;
+        }
+        &__profile-picture {
+            border: 3px solid $White;
+            border-radius: 50%;
+        }
+        &__span {
+            font-size: .9rem;
+            color: $Pale-Blue;
+        }
+        &__name {
+            font-size: 1.5rem;
+            font-weight: 300;
+        }
+
+        &__timeframe {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: $Desaturated-blue;
+            transition: color .1s ease-in-out;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .active {
+            color: white;
+        }
+        &__analysis-bg-work {
+            @include background($Light-orange, 'images/icon-work.svg')
+        }
+        &__analysis-bg-play {
+            @include background($Soft-blue, 'images/icon-play.svg')
+        }
+        &__analysis-bg-study {
+            @include background($Light-red, 'images/icon-study.svg')
+        }
+        &__analysis-bg-exercise {
+            @include background($Lime-green, 'images/icon-exercise.svg');
+            background-position: top 0px right 20px;
+        }
+        &__analysis-bg-social {
+            @include background($Violet, 'images/icon-social.svg')
+        }
+        &__analysis-bg-selfcare {
+            @include background($Soft-orange, 'images/icon-self-care.svg')
+        }
+        &__analysis {
+            background-color: $Dark-blue;
+        }
+        &__category {
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+        &__hours {
+            font-size: 2rem;
+            font-weight: 200;
+        }
+        &__last-week {
+            color: $Pale-Blue;
+            font-size: .9rem;
+            font-weight: 400;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        .dashboard {            
+            &__profile-user {
+                grid-template-columns: 1fr;
+            }            
+            &__name {
+                font-size: 2.5rem;
+                line-height: normal;
+            }
+            &__analysis {
+                max-height: 85%;
+                padding: 1.75rem;
+                grid-template-rows: auto auto 10px;
+            }
+            &__category {
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+            &__hours {
+                font-size: 3.5rem;
+                padding-top: 1rem;
+            }
+            &__last-week {
+                grid-area: 3 / 1 / 4 / 3;
+                justify-self: flex-start;
+                font-size: 1rem;
+                padding: 0 0 .5rem 0;
+            }
+        }
+    }
+}
+

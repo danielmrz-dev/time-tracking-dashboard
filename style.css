@@ -1,0 +1,118 @@
+body {
+  background-color: #0f1424;
+  color: #fff;
+  font-family: "Rubik", sans-serif;
+}
+body .dashboard__profile-container {
+  background-color: #1c1f4a;
+}
+body .dashboard__profile-user {
+  background-color: #5847eb;
+  grid-template-columns: 85px 1fr;
+}
+body .dashboard__profile-picture {
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+body .dashboard__span {
+  font-size: 0.9rem;
+  color: #bdc1ff;
+}
+body .dashboard__name {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+body .dashboard__timeframe {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #6f76c8;
+  transition: color 0.1s ease-in-out;
+}
+body .dashboard__timeframe:hover {
+  cursor: pointer;
+}
+body .dashboard .active {
+  color: white;
+}
+body .dashboard__analysis-bg-work {
+  background: #ff8c66 url("images/icon-work.svg") no-repeat;
+  background-position: top -10px right 20px;
+  background-size: 75px;
+  z-index: -1;
+}
+body .dashboard__analysis-bg-play {
+  background: #56c2e6 url("images/icon-play.svg") no-repeat;
+  background-position: top -10px right 20px;
+  background-size: 75px;
+  z-index: -1;
+}
+body .dashboard__analysis-bg-study {
+  background: #ff5c7c url("images/icon-study.svg") no-repeat;
+  background-position: top -10px right 20px;
+  background-size: 75px;
+  z-index: -1;
+}
+body .dashboard__analysis-bg-exercise {
+  background: #4acf81 url("images/icon-exercise.svg") no-repeat;
+  background-position: top -10px right 20px;
+  background-size: 75px;
+  z-index: -1;
+  background-position: top 0px right 20px;
+}
+body .dashboard__analysis-bg-social {
+  background: #7536d3 url("images/icon-social.svg") no-repeat;
+  background-position: top -10px right 20px;
+  background-size: 75px;
+  z-index: -1;
+}
+body .dashboard__analysis-bg-selfcare {
+  background: #f1c65b url("images/icon-self-care.svg") no-repeat;
+  background-position: top -10px right 20px;
+  background-size: 75px;
+  z-index: -1;
+}
+body .dashboard__analysis {
+  background-color: #1c1f4a;
+}
+body .dashboard__category {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+body .dashboard__hours {
+  font-size: 2rem;
+  font-weight: 200;
+}
+body .dashboard__last-week {
+  color: #bdc1ff;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 1024px) {
+  body .dashboard__profile-user {
+    grid-template-columns: 1fr;
+  }
+  body .dashboard__name {
+    font-size: 2.5rem;
+    line-height: normal;
+  }
+  body .dashboard__analysis {
+    max-height: 85%;
+    padding: 1.75rem;
+    grid-template-rows: auto auto 10px;
+  }
+  body .dashboard__category {
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  body .dashboard__hours {
+    font-size: 3.5rem;
+    padding-top: 1rem;
+  }
+  body .dashboard__last-week {
+    grid-area: 3/1/4/3;
+    justify-self: flex-start;
+    font-size: 1rem;
+    padding: 0 0 0.5rem 0;
+  }
+}/*# sourceMappingURL=style.css.map */

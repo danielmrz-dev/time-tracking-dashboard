@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A Time Tracking Dashboard">
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="index.js" defer></script>
+</head>
+<body class="grid justify-center my-16 lg:items-center lg:min-h-screen lg:my-0">
+
+  <main class="dashboard grid gap-6 lg:grid-cols-4 lg:max-w-[1100px] lg:gap-7">
+    <div class="dashboard__profile-container rounded-2xl grid row-start-1 row-end-3">
+      <div class="dashboard__profile-user p-8 rounded-2xl grid grid-cols-2 items-center">
+        <img src="images/daniel-avatar.png" alt="profile picture" class="dashboard__profile-picture w-[68px] row-start-1 row-end-3 lg:w-[85px]">
+        <span class="dashboard__span self-end lg:pt-9">Report for</span>
+        <h1 class="dashboard__name self-start lg:pb-9">Daniel Mariz</h1>
+      </div>
+      <div class="dashboard__frequency flex justify-around p-5 lg:flex-col lg:gap-4 lg:p-7">
+        <p class="dashboard__timeframe daily">Daily</p>
+        <p class="dashboard__timeframe weekly">Weekly</p>
+        <p class="dashboard__timeframe monthly">Monthly</p>
+      </div>
+    </div>
+    
+    <div class="dashboard__analysis-container relative h-[160px] grid lg:h-full">
+
+      <div class="dashboard__analysis-bg-work rounded-2xl absolute h-full w-full flex justify-end"></div>
+
+      <div class="dashboard__analysis grid grid-cols-2 items-center p-6 rounded-2xl self-end">
+        <h2 class="dashboard__category">Work</h2>
+        <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+        
+        <h3 class="dashboard__hours thirty"><span class="dynamic-hours">32</span>hrs</h3>
+        <p class="dashboard__last-week justify-self-end">Previous - <span class="dynamic-previous">36</span>hrs</p>
+
+      </div>
+
+    </div>
+
+    <div class="dashboard__analysis-container relative h-[160px] grid lg:h-full">
+
+      <div class="dashboard__analysis-bg-play rounded-2xl absolute h-full w-full flex justify-end"></div>
+
+      <div class="dashboard__analysis grid grid-cols-2 items-center p-6 rounded-2xl self-end">
+        <h2 class="dashboard__category">Play</h2>
+        <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+        <h3 class="dashboard__hours"><span class="dynamic-hours">10</span>hrs</h3>
+        <p class="dashboard__last-week justify-self-end">Previous - <span class="dynamic-previous">8</span>hrs</p>
+
+      </div>
+    </div>
+
+    <div class="dashboard__analysis-container relative h-[160px] grid lg:h-full">
+      
+      <div class="dashboard__analysis-bg-study rounded-2xl absolute h-full w-full flex justify-end"></div>
+      
+      <div class="dashboard__analysis grid grid-cols-2 items-center p-6 rounded-2xl self-end">
+        <h2 class="dashboard__category">Study</h2>
+        <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+        <h3 class="dashboard__hours "><span class="dynamic-hours">4</span>hrs</h3>
+        <p class="dashboard__last-week justify-self-end ">Previous - <span class="dynamic-previous">7</span>hrs</p>
+
+      </div>
+    </div>
+
+    <div class="dashboard__analysis-container relative h-[160px] grid lg:h-full">
+      
+      <div class="dashboard__analysis-bg-exercise rounded-2xl absolute h-full w-full flex justify-end"></div>
+      
+      <div class="dashboard__analysis grid grid-cols-2 items-center p-6 rounded-2xl self-end">
+        <h2 class="dashboard__category">Exercise</h2>
+        <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+        <h3 class="dashboard__hours"><span class="dynamic-hours">4</span>hrs</h3>
+        <p class="dashboard__last-week justify-self-end">Previous - <span class="dynamic-previous">5</span>hrs</p>
+
+      </div>
+    </div>
+
+    <div class="dashboard__analysis-container relative h-[160px] grid lg:h-full">
+      
+      <div class="dashboard__analysis-bg-social rounded-2xl absolute h-full w-full flex justify-end"></div>
+      
+      <div class="dashboard__analysis grid grid-cols-2 items-center p-6 rounded-2xl self-end">
+        <h2 class="dashboard__category">Social</h2>
+        <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+        <h3 class="dashboard__hours"><span class="dynamic-hours">5</span>hrs</h3>
+        <p class="dashboard__last-week justify-self-end">Previous - <span class="dynamic-previous">10</span>hrs</p>
+
+      </div>
+    </div>
+
+    <div class="dashboard__analysis-container relative h-[160px] grid lg:h-full">
+      
+      <div class="dashboard__analysis-bg-selfcare rounded-2xl absolute h-full w-full flex justify-end"></div>
+      
+      <div class="dashboard__analysis grid grid-cols-2 items-center p-6 rounded-2xl self-end">
+        <h2 class="dashboard__category">Self Care</h2>
+        <img src="images/icon-ellipsis.svg" alt="" class="justify-self-end">
+
+        <h3 class="dashboard__hours"><span class="dynamic-hours">2</span>hrs</h3>
+        <p class="dashboard__last-week justify-self-end">Previous - <span class="dynamic-previous">2</span>hrs</p>
+
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="attribution hidden">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </footer>
+</body>
+</html>
